@@ -29,7 +29,7 @@ def yoururl():
             f = request.files['file']
             full_name = request.form['url-ra'] + secure_filename(f.filename)
             f.save(
-                'C:/Users/haida/Downloads/My Projects/url-shortener/static/user_files/' + full_name)
+                './static/user_files/' + full_name)
             urls[request.form['url-ra']] = {'file': full_name}
 
         with open('urls.json', 'w') as url_file:
